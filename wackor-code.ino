@@ -106,8 +106,7 @@ void loop() {
 void distanceBehaviour() {
 
   if (currentMillis - previousSonarMillis >= sonarInterval) { // Typical millis delay, checks whether enough time(interval) has passed for a new move
-//    previousSonarMillis += sonarInterval; 
-    previousSonarMillis = currentMillis;
+    previousSonarMillis += sonarInterval; 
    
     pulse = pulseIn(sonarPin, HIGH); // Raw data into pulse variable
     inches = pulse/147; // Calculate raw data to inches
